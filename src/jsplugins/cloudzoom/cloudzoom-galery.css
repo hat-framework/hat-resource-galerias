@@ -1,0 +1,23 @@
+.zoomcontainer{
+    display: table;
+}
+
+.zoom-small-image{
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    box-shadow: 10px 10px 5px #888;
+    width: 240px;
+}
+
+.cloud-zoom img{
+    margin-bottom: 5px;
+    height: 240px;
+    max-width: 240px;
+}
+
+.cloud-zoom-gallery img{
+    float: left;
+    height: 50px;
+    padding: 5px;
+    width: 50px; 
+}
