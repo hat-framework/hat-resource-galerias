@@ -1,9 +1,9 @@
 {
-    "name": "hatframework/resources/galerias",
+    "name": "hatframework/hat-resource-galerias",
     "type": "library",
     "description": "",
     "keywords": [],
-    "homepage": "https://github.com/hat-framework/resources/galerias",
+    "homepage": "https://github.com/hat-framework/hat-resource-galerias",
     "license": "MIT",
     "authors": [
         {
