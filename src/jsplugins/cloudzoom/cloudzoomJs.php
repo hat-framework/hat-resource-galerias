@@ -21,9 +21,8 @@ class cloudzoomJS extends JsPlugin {
         $this->setaleft  = $this->Html->getUrlImage("setaleft.jpg");
         $this->setaright = $this->Html->getUrlImage("setaright.jpg");
         
-        $this->Html->LoadJs("$this->url/cloud-zoom.1.0.2", true);
-        if(!DISABLE_EXTERN_CSS) $this->Html->LoadCss("galeria");
-        $this->Html->loadExternCss("$this->url/cloud-zoom");
+        $this->Html->LoadBowerComponent("cloud-zoom/cloud-zoom.1.0.2.min");
+        $this->Html->LoadBowerComponentCss("cloud-zoom/cloud-zoom");
     }
     
     public function draw($image){
