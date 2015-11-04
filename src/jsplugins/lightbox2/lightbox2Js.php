@@ -12,20 +12,12 @@ class lightbox2Js extends JsPlugin{
         return self::$instance;
     }
     
-    public function start($id, $type = "."){
-        $this->Html->LoadJQueryFunction("
-            $(function() {
-                $('$type$id a.img').lightBox();
-            });
-        ");
-    }
+    public function start($id, $type = "."){}
     
-    public function init(){        
-        $this->Html->LoadJs("$this->url/js/lightbox", true);
-        $this->Html->loadExternCss("$this->url/css/lightbox");
+    public function init(){
+        $this->Html->LoadJquery();
+        $this->Html->LoadBowerComponent(array('lightbox2/dist/js/lightbox.min'),array('lightbox2/dist/css/lightbox'));
     }
     
     
 }
-
-?>

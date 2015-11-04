@@ -12,27 +12,12 @@ class lightboxJs extends JsPlugin{
         return self::$instance;
     }
     
-    public function start($id, $type = "."){
-        $this->Html->LoadJQueryFunction("
-            $(function() {
-                $('$type$id a.img').lightBox({
-                    containerResizeSpeed: 350,
-                    imageLoading:   \"$this->url/images/lightbox-ico-loading.gif\",
-                    imageBtnPrev:   \"$this->url/images/lightbox-btn-prev.gif\",
-                    imageBtnNext:   \"$this->url/images/lightbox-btn-next.gif\",
-                    imageBtnClose:  \"$this->url/images/lightbox-btn-close.gif\",
-                    imageBlank:     \"$this->url/images/lightbox-blank.gif\"
-                });
-            });
-        ");
-    }
+    public function start($id, $type = "."){}
     
-    public function init(){        
-        $this->Html->LoadJs("$this->url/js/jquery.lightbox-0.5.min", true);
-        $this->Html->loadExternCss("$this->url/css/jquery.lightbox-0.5");
+    public function init(){
+        $this->Html->LoadJquery();
+        $this->Html->LoadBowerComponent(array('lightbox2/dist/js/lightbox.min'),array('lightbox2/dist/css/lightbox'));
     }
     
     
 }
-
-?>
